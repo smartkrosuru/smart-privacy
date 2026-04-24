@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – SMart</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #16a34a;
+      --green-light: #dcfce7;
+      --green-dark: #14532d;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #fafafa;
+      --card: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* Header */
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo-circle {
+      width: 34px;
+      height: 34px;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      color: #fff;
+      font-weight: 400;
+    }
+    .logo-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+    .logo-name span { color: var(--green); font-weight: 400; }
+    .badge {
+      font-size: 11px;
+      background: var(--green-light);
+      color: var(--green-dark);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 60%);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 24px 48px;
+    }
+    .hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .hero-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--green);
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 520px;
+    }
+    .meta {
+      display: flex;
+      gap: 24px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    .meta-item {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .meta-item strong { color: var(--text); font-weight: 500; }
+
+    /* Main layout */
+    .main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* TOC sidebar */
+    .toc {
+      position: sticky;
+      top: 76px;
+    }
+    .toc-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .toc a {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 5px 0 5px 12px;
+      border-left: 2px solid var(--border);
+      margin-bottom: 2px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .toc a:hover, .toc a.active {
+      color: var(--green);
+      border-color: var(--green);
+    }
+
+    /* Content */
+    .content section {
+      margin-bottom: 48px;
+      scroll-margin-top: 80px;
+    }
+    .content h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-num {
+      width: 28px;
+      height: 28px;
+      background: var(--green-light);
+      color: var(--green-dark);
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .content p {
+      color: #374151;
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+    .content ul {
+      list-style: none;
+      margin: 12px 0 16px;
+    }
+    .content ul li {
+      font-size: 15px;
+      color: #374151;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+    .content ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+    .highlight-box {
+      background: var(--green-light);
+      border-left: 3px solid var(--green);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--green-dark);
+    }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 16px;
+    }
+    .contact-card p { margin: 4px 0; font-size: 14px; }
+    .contact-card a { color: var(--green); text-decoration: none; font-weight: 500; }
+
+    /* Footer */
+    footer {
+      background: var(--text);
+      color: #9ca3af;
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+    }
+    footer strong { color: #fff; }
+
+    @media (max-width: 640px) {
+      .main { grid-template-columns: 1fr; }
+      .toc { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-circle">S</div>
+      <span class="logo-name">S<span>Mart</span></span>
+    </a>
+    <span class="badge">Privacy Policy</span>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="hero-label">Legal Document</p>
+    <h1>Privacy Policy</h1>
+    <p>We believe your personal information belongs to you. Here's exactly what we collect, why we collect it, and how we protect it.</p>
+    <div class="meta">
+      <div class="meta-item"><strong>Effective Date:</strong> April 24, 2026</div>
+      <div class="meta-item"><strong>Last Updated:</strong> April 24, 2026</div>
+      <div class="meta-item"><strong>App:</strong> SMart – Grocery Delivery</div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- Sidebar TOC -->
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-title">Contents</p>
+    <a href="#s1">Information We Collect</a>
+    <a href="#s2">How We Use It</a>
+    <a href="#s3">Sharing Your Data</a>
+    <a href="#s4">Data Storage</a>
+    <a href="#s5">Your Rights</a>
+    <a href="#s6">Children's Privacy</a>
+    <a href="#s7">Security</a>
+    <a href="#s8">Changes</a>
+    <a href="#s9">Contact Us</a>
+  </nav>
+
+  <!-- Main content -->
+  <div class="content">
+
+    <div class="highlight-box">
+      By using the SMart app, you agree to the collection and use of information as described in this policy. If you do not agree, please do not use the app.
+    </div>
+
+    <section id="s1">
+      <h2><span class="section-num">1</span> Information We Collect</h2>
+      <p>We collect information you provide directly, and some information automatically when you use the app.</p>
+      <p><strong>Information you provide:</strong></p>
+      <ul>
+        <li>Full name, mobile number, and email address (during registration)</li>
+        <li>Delivery address and location data (to fulfil your orders)</li>
+        <li>Order details including items, quantities, and payment method</li>
+        <li>Profile photo (optional)</li>
+        <li>Communications you send us (support messages, feedback)</li>
+      </ul>
+      <p><strong>Information collected automatically:</strong></p>
+      <ul>
+        <li>Device type, operating system, and app version</li>
+        <li>IP address and approximate location (if location permission is granted)</li>
+        <li>App usage data such as screens visited and features used</li>
+        <li>Crash reports and error logs to improve app stability</li>
+      </ul>
+    </section>
+
+    <section id="s2">
+      <h2><span class="section-num">2</span> How We Use Your Information</h2>
+      <p>We use your information only for purposes directly related to providing and improving SMart:</p>
+      <ul>
+        <li>To create and manage your account</li>
+        <li>To process, deliver, and track your grocery orders</li>
+        <li>To send order confirmations and delivery status updates via SMS or notification</li>
+        <li>To provide customer support and respond to your queries</li>
+        <li>To personalise your shopping experience (recommended products, saved addresses)</li>
+        <li>To detect and prevent fraud or unauthorised access</li>
+        <li>To comply with applicable laws and regulations</li>
+      </ul>
+      <div class="highlight-box">
+        We do not sell your personal data to third parties. We do not use your data for advertising purposes on external platforms.
+      </div>
+    </section>
+
+    <section id="s3">
+      <h2><span class="section-num">3</span> Sharing Your Data</h2>
+      <p>We only share your information in the following limited circumstances:</p>
+      <ul>
+        <li><strong>Delivery agents:</strong> Your name, address, and contact number are shared with the assigned delivery agent to complete your order.</li>
+        <li><strong>Service providers:</strong> We use trusted third-party services (such as SMS providers and cloud hosting) that process data on our behalf under strict confidentiality agreements.</li>
+        <li><strong>Legal requirements:</strong> We may disclose information if required by law, court order, or government authority.</li>
+        <li><strong>Business transfers:</strong> In the event of a merger or acquisition, your data may be transferred as part of the business assets, with prior notice to you.</li>
+      </ul>
+    </section>
+
+    <section id="s4">
+      <h2><span class="section-num">4</span> Data Storage &amp; Retention</h2>
+      <p>Your data is stored securely on cloud servers (Railway / MongoDB Atlas). We retain your personal information for as long as your account is active or as needed to provide services.</p>
+      <ul>
+        <li>Account data is retained until you delete your account</li>
+        <li>Order history is retained for 3 years for legal and tax compliance</li>
+        <li>You may request deletion of your account and associated data at any time</li>
+      </ul>
+    </section>
+
+    <section id="s5">
+      <h2><span class="section-num">5</span> Your Rights</h2>
+      <p>You have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
+        <li><strong>Correction:</strong> Update or correct inaccurate information in your profile</li>
+        <li><strong>Deletion:</strong> Request deletion of your account and personal data</li>
+        <li><strong>Opt-out:</strong> Unsubscribe from promotional notifications at any time via app settings</li>
+        <li><strong>Data portability:</strong> Request your data in a structured, machine-readable format</li>
+      </ul>
+      <p>To exercise any of these rights, contact us at the email below.</p>
+    </section>
+
+    <section id="s6">
+      <h2><span class="section-num">6</span> Children's Privacy</h2>
+      <p>SMart is not intended for use by anyone under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with their data, please contact us and we will delete it promptly.</p>
+    </section>
+
+    <section id="s7">
+      <h2><span class="section-num">7</span> Security</h2>
+      <p>We implement industry-standard security measures to protect your data:</p>
+      <ul>
+        <li>Passwords are hashed using bcrypt and never stored in plain text</li>
+        <li>All API communication uses HTTPS/TLS encryption</li>
+        <li>JWT tokens are used for authenticated sessions with expiry controls</li>
+        <li>Security middleware including rate limiting and input sanitisation</li>
+      </ul>
+      <p>No method of transmission over the internet is 100% secure. We strive to protect your data but cannot guarantee absolute security.</p>
+    </section>
+
+    <section id="s8">
+      <h2><span class="section-num">8</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we make significant changes, we will notify you through the app or via email. Continued use of SMart after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section id="s9">
+      <h2><span class="section-num">9</span> Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please reach out:</p>
+      <div class="contact-card">
+        <p><strong>SMart – Grocery Delivery App</strong></p>
+        <p>Tirupati, Andhra Pradesh, India</p>
+        <p>Email: <a href="mailto:privacy@shopsmart.in">privacy@shopsmart.in</a></p>
+        <p>Support: <a href="mailto:support@shopsmart.in">support@shopsmart.in</a></p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 <strong>SMart</strong>. All rights reserved. Tirupati, Andhra Pradesh, India.</p>
+  <p style="margin-top:8px;">Shop Smart, Live Smart.</p>
+</footer>
+
+<script>
+  // Highlight active TOC link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.toc a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
